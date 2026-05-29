@@ -56,6 +56,7 @@ Reads the full conversation history and asks Gemini to produce a raw JSON schema
 
 **`write_code`**
 Passes the schema to Gemini and asks it to write a complete, self-contained Python script. The prompt mandates:
+
 - three noise helper functions (`add_nulls`, `add_outliers`, `add_format_noise`) with exact signatures
 - numpy vectorization for all data generation (no Python `for` loops per row)
 - column-level distribution: `normal`, `lognormal`, `uniform`, `poisson`, `skewed`
@@ -71,24 +72,24 @@ Compiles the generated code first (`compile(code, "<generated>", "exec")`) to ca
 
 ### Conditional edges
 
-| Function | Input checked | Routes |
-|---|---|---|
-| `should_gather_more` | `%%READY%%` in last `AIMessage` | `"gather"` → loop, `"design"` → proceed |
-| `should_retry` | `state["error"]`, `state["attempts"]` | `"success"` → END, `"retry"` → write_code, `"give_up"` → END |
+| Function             | Input checked                         | Routes                                                       |
+| -------------------- | ------------------------------------- | ------------------------------------------------------------ |
+| `should_gather_more` | `%%READY%%` in last `AIMessage`       | `"gather"` → loop, `"design"` → proceed                      |
+| `should_retry`       | `state["error"]`, `state["attempts"]` | `"success"` → END, `"retry"` → write_code, `"give_up"` → END |
 
 ---
 
 ## LangGraph patterns used
 
-| Pattern | Where in code |
-|---|---|
-| `StateGraph` + `TypedDict` state | `agent.py` — `State` class |
-| `Annotated[list, add_messages]` reducer | `State.messages` — appends, never overwrites |
-| `interrupt(value)` — pause for human input | `gather_requirements` node |
-| `Command(resume=value)` — resume from interrupt | `main.py` interrupt loop |
-| `MemorySaver` checkpointer | `build_graph()` — required for `interrupt` to persist state |
-| Named conditional edges | `should_gather_more`, `should_retry` |
-| `get_state(config).next` | `main.py` — detects whether graph has reached END |
+| Pattern                                         | Where in code                                               |
+| ----------------------------------------------- | ----------------------------------------------------------- |
+| `StateGraph` + `TypedDict` state                | `agent.py` — `State` class                                  |
+| `Annotated[list, add_messages]` reducer         | `State.messages` — appends, never overwrites                |
+| `interrupt(value)` — pause for human input      | `gather_requirements` node                                  |
+| `Command(resume=value)` — resume from interrupt | `main.py` interrupt loop                                    |
+| `MemorySaver` checkpointer                      | `build_graph()` — required for `interrupt` to persist state |
+| Named conditional edges                         | `should_gather_more`, `should_retry`                        |
+| `get_state(config).next`                        | `main.py` — detects whether graph has reached END           |
 
 ---
 
@@ -187,14 +188,14 @@ Attempts: 1
 
 ## Requirements
 
-| Package | Purpose |
-|---|---|
-| `langgraph>=0.2.0` | Graph execution, `interrupt`, `MemorySaver`, `Command` |
-| `langchain-google-genai>=1.0.0` | Gemini 2.5 Flash via LangChain |
-| `langchain-core>=0.2.0` | `HumanMessage`, `AIMessage`, `SystemMessage` |
-| `langchain>=0.2.0` | LangChain base |
-| `faker>=20.0.0` | Realistic text data (names, emails, phones, dates) |
-| `pandas>=2.0.0` | DataFrame construction and CSV export |
-| `numpy>=1.24.0` | Vectorized data generation and distributions |
-| `python-dotenv>=1.0.0` | `.env` file loading |
-| `typing_extensions>=4.7.0` | `TypedDict` backport |
+| Package                         | Purpose                                                |
+| ------------------------------- | ------------------------------------------------------ |
+| `langgraph>=0.2.0`              | Graph execution, `interrupt`, `MemorySaver`, `Command` |
+| `langchain-google-genai>=1.0.0` | Gemini 2.5 Flash via LangChain                         |
+| `langchain-core>=0.2.0`         | `HumanMessage`, `AIMessage`, `SystemMessage`           |
+| `langchain>=0.2.0`              | LangChain base                                         |
+| `faker>=20.0.0`                 | Realistic text data (names, emails, phones, dates)     |
+| `pandas>=2.0.0`                 | DataFrame construction and CSV export                  |
+| `numpy>=1.24.0`                 | Vectorized data generation and distributions           |
+| `python-dotenv>=1.0.0`          | `.env` file loading                                    |
+| `typing_extensions>=4.7.0`      | `TypedDict` backport                                   |
