@@ -1,0 +1,51 @@
+device_id,device_type,room,installation_date
+5be6128e-18c2-4797-a142-ea7d17be3111,Temperature Sensor,Bedroom,2023-03-25
+beb79919-3f22-4af8-a3be-d01d43cf2fde,Motion Sensor,Kitchen,2023-11-19
+b02b61c4-a3d7-4628-ace6-6fa2fd5166e6,Combined Sensor,Dining Room,2021-09-01
+28f49481-a0a0-4dc4-a720-9bdf1c11f735,Combined Sensor,Kitchen,2020-02-23
+4b0dbb41-8d52-48f1-942c-3fe860e7a113,Motion Sensor,Office,2020-09-29
+405cacec-8774-49a9-b7d2-1e02ff01cf99,Motion Sensor,Living Room,2020-03-16
+aefcfad8-efc8-4849-b3aa-7efe4458a885,Temperature Sensor,Office,2023-04-09
+ab9099a4-35a2-40ae-9af3-05535ec42e08,Combined Sensor,Bathroom,2021-09-15
+0e51f30d-c6a7-4e39-84b0-32ccd7c524a5,Temperature Sensor,Bedroom,2020-06-24
+3139d32c-93cd-49bf-9c94-1cf0dc98d2c1,Temperature Sensor,Dining Room,2022-02-26
+1a2a73ed-562b-4f79-8374-59eef50bea63,Humidity Sensor,Office,2023-09-19
+17fc695a-07a0-4a6e-8822-e8f36c031199,Temperature Sensor,Hallway,2023-08-18
+e27a984d-6548-41d0-bfcd-9eb1a7cad415,Temperature Sensor,Hallway,2022-10-23
+47378190-96da-4dac-b2ff-5d2a386ecbe0,Combined Sensor,Living Room,2020-11-30
+972a8469-1641-4f82-8b9d-2434e465e150,Motion Sensor,Dining Room,2022-01-12
+b74d0fb1-32e7-4629-8fad-c1a606cb0fb3,Temperature Sensor,Living Room,2021-08-22
+956269f0-e5d7-4875-adad-d6c795a76d79,Motion Sensor,Bathroom,2021-01-02
+98ae4334-6c12-4ce8-ae34-0454cac5b68c,Motion Sensor,Kitchen,2022-06-08
+988c24c9-61b1-4d22-a280-1c4510435a10,Motion Sensor,Kitchen,01-03-2022
+759cde66-bacf-43d0-8b1f-9163ce9ff57f,Temperature Sensor,Kitchen,2023-06-26
+c241330b-01a9-471f-9e8a-774bcf36d58b,Combined Sensor,Bedroom,2020-04-22
+ec1b8ca1-f91e-4d4c-9ff4-9b7889463e85,Motion Sensor,Living Room,19/03/2023
+29a3b2e9-5d65-4441-9588-42dea2bc372f,Motion Sensor,Bathroom,2020-11-28
+10f1bc81-448a-4a9e-a6b2-bc5b50c187fc,Humidity Sensor,Bedroom,2023-10-08
+5304317f-af42-412f-b838-b3268e944239,Temperature Sensor,Hallway,2020-11-20
+bdd640fb-0667-4ad1-9c80-317fa3b1799d,Motion Sensor,Dining Room,2020-02-15
+dc713d96-0c0f-4195-817a-f08a1745d6d8,Temperature Sensor,Office,2021-02-19
+a28defe3-9bf0-4273-9247-6f57a5e5a5ab,Motion Sensor,Living Room,2023-06-10
+ce177b4e-0837-48a3-9261-a7ab3aa2e4f9,Humidity Sensor,Living Room,2021-05-07
+9a1de644-815e-46d1-bb8f-aa1837f8a88b,Temperature Sensor,Dining Room,2020-12-29
+451b4cf3-6123-4df7-b656-af7229d4beef,Temperature Sensor,Living Room,2022-01-15
+371ecd7b-27cd-4130-8722-9389571aa876,Humidity Sensor,Bedroom,2020-08-23
+366eb16f-508e-4ad7-b7c9-3acfe059a0ee,Motion Sensor,Bathroom,2022-01-27
+23b8c1e9-3924-46de-beb1-3b9046685257,Humidity Sensor,Office,2022-07-18
+fc377a4c-4a15-444d-85e7-ce8a3a578a8e,Temperature Sensor,Living Room,2023-08-01
+bd9c66b3-ad3c-4d6d-9a3d-1fa7bc8960a9,Combined Sensor,Dining Room,2021-04-03
+7e570ddf-8270-40a8-a369-b584ff5e9ff0,Humidity Sensor,Hallway,2021-03-15
+9132b63e-f162-47e4-a9c3-49e03602f8ac,Humidity Sensor,Bedroom,2021-04-16
+7412b293-4729-4739-a14f-f3d719db3ad0,Motion Sensor,Office,2020-06-09
+bf3c4c06-4343-48bc-89fa-6a688fb5d27b,Temperature Sensor,Living Room,2023-11-06
+6c307511-b2b9-437a-a8df-6ec4ce4a2bbd,Temperature Sensor,Bedroom,2021-02-27
+ddd1dfb2-3b98-4ef8-9af6-1a26146d3f31,Temperature Sensor,Living Room,2021-04-09
+e2acf72f-9e57-4f7a-a0ee-89aed453dd32,Motion Sensor,Living Room,2023-07-27
+f143262f-dc5c-4eed-8da0-365bf89897b9,Temperature Sensor,Living Room,2021-02-10
+a9488d99-0bbb-4599-91ce-5dd2b45ed1f0,Combined Sensor,Office,2023-03-24
+6b65a6a4-8b81-48f6-b38a-088ca65ed389,Humidity Sensor,Living Room,2023-01-08
+ff50bde4-3825-47b8-9cab-cc97663f1c97,Temperature Sensor,Office,2021-12-26
+43b7a3a6-9a8d-4a03-980d-7b71d8f56413,Temperature Sensor,Bedroom,2022-07-13
+3eabedcb-baa8-4dd4-88bd-64072bcfbe01,Motion Sensor,Bedroom,2020-01-11
+24933b83-7577-40a9-a491-f0b2ea1fca65,Combined Sensor,Dining Room,2021-06-14
