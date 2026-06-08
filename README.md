@@ -109,12 +109,15 @@ Compiles the generated code first (`compile(code, "<generated>", "exec")`) to ca
 
 ```
 langgraph-data-quality-agent/
-├── agent.py          # State, nodes, conditional edges, build_graph()
-├── main.py           # CLI entry point — interrupt loop driver
+├── agent.py               # State, nodes, conditional edges, build_graph()
+├── app.py                 # Streamlit web interface
+├── main.py                # CLI entry point — interrupt loop driver
 ├── requirements.txt
-├── .env              # GOOGLE_API_KEY (not committed)
+├── .env                   # GOOGLE_API_KEY (not committed)
 ├── .env.example
-└── output_*/         # Generated at runtime, one timestamped dir per run
+├── .streamlit/
+│   └── config.toml        # Dark theme configuration
+└── output_*/              # Generated at runtime, one timestamped dir per run
 ```
 
 ---
@@ -148,6 +151,22 @@ GOOGLE_API_KEY=your_key_here
 ---
 
 ## Usage
+
+### Web interface (Streamlit)
+
+```bash
+streamlit run app.py
+```
+
+Opens at `http://localhost:8501`. The interface provides:
+
+- A chat window where you describe your domain and answer the agent's clarifying questions
+- A live spinner during the design, code-writing, and execution phases
+- A results panel with per-table metrics, a collapsible schema view, a collapsible generated-code view, dataframe previews, and CSV download buttons
+
+The sidebar controls session management (new session button), display settings (preview row count, default expander state), and shows the current agent phase.
+
+### CLI
 
 ```bash
 python main.py
@@ -199,3 +218,4 @@ Attempts: 1
 | `numpy>=1.24.0`                 | Vectorized data generation and distributions           |
 | `python-dotenv>=1.0.0`          | `.env` file loading                                    |
 | `typing_extensions>=4.7.0`      | `TypedDict` backport                                   |
+| `streamlit>=1.32.0`             | Web interface                                          |
